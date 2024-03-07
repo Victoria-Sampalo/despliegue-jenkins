@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                echo 'Copiando los ficheros hasta la ruta de despliegue'
+                COPY . /var/www/html/
                 sh 'npm install -g serve'
             }
         }
